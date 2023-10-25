@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Product Return</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="invoice_number">Invoice Number:</label>
+        <input type="text" name="invoice_number">
+        <br>
+        <label for="model_number">Model Number:</label>
+        <input type="text" name="model_number">
+        <br>
+        <label for="quantity">Quantity Returned:</label>
+        <input type="number" name="quantity">
+        <br>
+        <button type="submit">Process Return</button>
+    </form>
+    <a href="{% url 'home' %}">Back to Home</a>
+{% endblock %}

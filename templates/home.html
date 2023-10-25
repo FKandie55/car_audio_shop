@@ -1,0 +1,30 @@
+<!-- templates/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Audio Shop</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'create_invoice' %}">Create Invoice</a></li>
+                <li><a href="{% url 'close_invoice' 1 %}">Close Invoice</a></li>
+                <li><a href="{% url 'return_product' %}">Return Product</a></li>
+                <li><a href="{% url 'generate_quote' %}">Generate Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to the Car Audio Shop</h1>
+        <!-- Add content and styling for your homepage here -->
+    </main>
+    <footer>
+        <p>&copy; 2023 Car Audio Shop</p>
+    </footer>
+</body>
+</html>
